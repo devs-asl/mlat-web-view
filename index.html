@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BANE Radar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<header class="brand-bg-extra-dark main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand company-logo" href="#"><img src="assets/medias/logo-v2.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars text-white"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link hover active text-white font-weight-300 position-relative" aria-current="page" href="#">Apps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Data</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hover-dropdown text-light-custom font-weight-300 position-relative" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Recovery
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item font-weight-300" href="#">Action</a></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">View Aircraft</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Social</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">About</a>
+              </li>
+            </ul>
+            <div class="dropdown login pe-3">
+                <div class="collapse navbar-collapse d-flex" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light-custom font-weight-300" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="far fa-user font-weight-600"></i> &nbsp; Login
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                          <li><a class="dropdown-item font-weight-300" href="#">Log Out</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </nav>
+</header>
+<section class="main-section">
+
+  <section class="left-sidebar-default">
+    <div class="accordion pt-3 ps-3" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item most-tracked-flights">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button h5 mb-0 brand-bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            Most tracked flights &nbsp; &nbsp;<span class="badge bg-warning">LIVE</span>&nbsp; &nbsp;<i class="far fa-question-circle question-icon-color" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See the top 5 flights"></i>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body brand-bg-extra-light px-2 py-2">
+  
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>1</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">540 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>2</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">230 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>3</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">420 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item last-clicked-flights">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed brand-bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            Last clicked flights &nbsp; &nbsp;<i class="far fa-question-circle question-icon-color" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See the top 5 flights"></i>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body brand-bg-extra-light px-2 py-2">
+            
+            
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>1</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">540 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+  
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>3</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">420 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+  
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item statistics">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed brand-bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            Statistics &nbsp; &nbsp;<span class="badge bg-warning">LIVE</span>&nbsp; &nbsp;<i class="far fa-question-circle question-icon-color" data-bs-toggle="tooltip" data-bs-placement="bottom" title="See the top 5 flights"></i>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body brand-bg-extra-light px-2 py-2">
+            
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>1</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">540 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+  
+            <a href="#">
+              <div class="sec d-flex justify-content-between align-items-center brand-bg-light p-2 border-radius-5 border-radius-p25rem mb-2">
+                <div class="left-content d-flex justify-content-between align-items-center">
+                  <div class="number text-white pe-3"><h3>3</h3></div>
+                  <div class="title">
+                    <h5 class="mb-0 text-white pb-1">FR334/RYR7BJ</h5>
+                    <p class="mb-0 text-white">Pafos (PFO) - Tallinn (TILL)</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <h5 class="mb-0 brand-text-orange">420 &nbsp;<i class="fas fa-users"></i></h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  
+  <section class="text-center  flight-details">
+  
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Click an Aircraft</button>
+  
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header flight-header">
+       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  
+       <div class="container-fluid no-padding bg-white border-radius-p25rem p-1">
+        <div class="row">
+            <div class="col d-flex justify-content-center"><img class="align-self-center" src="assets/medias/airlines-logo/qatar-airways-logo.png" width="80px;" alt="" /></div>
+            <div class="col">
+                <div class="flight-number">
+                    <p>Flight No.</p>
+                    <span>QR634</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="flight-callsign">
+                    <p>Callsign</p>
+                    <span>CTR634</span>
+                </div>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="offcanvas-body brand-bg-extra-light">
+      <div class="flight-destination bg-white mt-4 border-radius-p25rem">
+        <div class="sec">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <p>Doha</p>
+                <h1>DOHA</h1>
+                <p>+03 (UTC +03:00)</p>
+              </div>
+              <div class="col">
+                <img src="assets/medias/icons/arrival.svg" height="50px" alt="">
+              </div>
+              <div class="col">
+                <p>Dhaka</p>
+                <h1>DHC</h1>
+                <p>+06 (UTC +06:00)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <p>Doha</p>
+                <h1>DOHA</h1>
+                <p>+03 (UTC +03:00)</p>
+              </div>
+              <div class="col">
+                <img src="assets/medias/icons/departure.svg" height="50px" alt="">
+              </div>
+              <div class="col">
+                <p>Dhaka</p>
+                <h1>DHC</h1>
+                <p>+06 (UTC +06:00)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <p>Doha</p>
+                <h1>DOHA</h1>
+                <p>+03 (UTC +03:00)</p>
+              </div>
+              <div class="col">
+                <img src="assets/medias/icons/arrival.svg" height="50px" alt="">
+              </div>
+              <div class="col">
+                <p>Dhaka</p>
+                <h1>DHC</h1>
+                <p>+06 (UTC +06:00)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  
+  
+  <section class="main-dashboard">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212653.8705015904!2d88.86395175910828!3d23.935364501373584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e1!3m2!1sen!2sbd!4v1636436107465!5m2!1sen!2sbd" width="100%" height="100%"></iframe>
+  </section>
+  <section class="footer">
+    <div class="container-fluid ps-0 pe-0">
+      <div class="footer-content d-flex justify-content-between bg-black">
+        <div class="left"><p class="text-white my-0 p-3">Copyright © 2021 BANE. &nbsp; All rights reserved.</p></div>
+        <div class="right"><p class="text-white my-0 p-3">Version 1.0</p></div>
+      </div>
+    </div>
+  </section>
+
+  
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/c12324853f.js" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

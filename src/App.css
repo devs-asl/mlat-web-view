@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+/* Start Header Style */
 .main{
   font-family: 'Lato', sans-serif !important;
   background-color: #000143;
@@ -27,11 +29,213 @@ a.link1 {
   margin-top: 7px;
 padding-right: 31px;
 }
+a.link2 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+padding-right: 31px;
+}
 a.active_class {
   color: #79799c;
-  border-bottom: 1px solid #faa718;
   color: white;
 }
 a.link1:hover{
   color: white;
 }
+a.link1:hover::after {
+  content: "";
+  width: 100%;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+a.link1:hover::after {
+  content: "";
+    width: 3.5%;
+    background: #FAA718;
+    z-index: 999999;
+    border-radius: 2px 2px 0px 0px;
+    bottom: 0px;
+    display: block;
+    padding-bottom: 3px;
+    position: absolute;
+}
+.drop.active_class {
+  color: #79799c;
+  color: white;
+}
+a#basic-nav-dropdown:hover {
+  color: white;
+}
+.drop.nav-item.dropdown:hover::after {
+  content: "";
+  width: 100%;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.drop.nav-item.dropdown:hover::after {
+  content: "";
+    width: 92.5%;
+    background: #FAA718;
+    z-index: 999999;
+    border-radius: 2px 2px 0px 0px;
+    bottom: -8px;
+    display: block;
+    padding-bottom: 3px;
+    position: absolute;
+
+}
+a.active_class::after {
+  content: "";
+  width: 3.5%;
+  background: #FAA718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: 0px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
+}
+a.link2.active_class::after {
+  content: "";
+  width: 7%;
+  background: #FAA718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: 0px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
+}
+.link2:hover{
+  color: white;
+}
+a.link2:hover::after {
+  content: "";
+  width: 100%;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+a.link2:hover::after {
+  content: "";
+    width: 7%;
+    background: #FAA718;
+    z-index: 999999;
+    border-radius: 2px 2px 0px 0px;
+    bottom: 0px;
+    display: block;
+    padding-bottom: 3px;
+    position: absolute;
+}
+button#dropdown-basic {
+  background-color: #000143;
+  border: none;
+  color: #79799c;
+}
+button:focus {
+  outline: 0;
+}
+.drop-menu.show {
+  margin-left: -85px;
+}
+.dropdown-basic__icon {
+  color: #faa719;
+  font-size: 18px;
+  margin-right: 10px;
+}
+button.toggle__color.navbar-toggler {
+  background-color:  #dee2e6;
+}
+
+/* End Header Style */
+
+/* Start Toggle Style */
+
+#Accordions {
+  position: absolute;
+}
+.Accordions__left {
+  width: 350px;
+  margin: 17px 0px 0px 17px;
+}
+.accordion-item:first-of-type .accordion-button {
+  background: #092359;
+  color: white;
+}
+.accordion-item:last-of-type .accordion-button {
+  background: #092359;
+  color: white;
+}
+
+.accordion-body {
+  padding: 1rem 1.25rem;
+  background: #4f6695 !important;
+}
+.Accordion-Header--live {
+  background: #ffc108;
+  margin-left: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1px 5px 1px 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+p.Accordion-Header--question {
+  margin: -1px;
+  margin-left: 10px;
+  border: 2px solid #4f6695;
+  font-size: 12px;
+  color: #4f6695;
+  font-weight: 800;
+  padding: 0px 3px 0px 3px;
+  border-radius: 10px;
+}
+.Accordion-body__content--inside {
+  background: #092359;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+
+}
+.Accordion-body__content {
+  margin-left: -11px;
+  margin-right: -11px;
+}
+.Accordion-body__content--inside ul li {
+  list-style: none;
+}
+.Accordion-body__content--inside__number {
+  color: white;
+  margin-left: -19px;
+}
+.Accordion-body__content--inside__number {
+  color: white;
+    margin-left: 17px;
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 11px;
+}
+span.Accordion-body__content--inside__content {
+  margin-left: 43px;
+    color: white;
+    display: block;
+    margin-top: -40px;
+    font-size: 15px;
+}
+small.Accordion-body__content--inside__content-small {
+  color: white;
+    display: block;
+    margin-left: 42px;
+    margin-top: -21px;
+    font-size: 12px;
+}
+.Accordion-body__content--inside__icon {
+  color: #faa718;
+  margin-left: 264px;
+  font-weight: 600;
+  margin-top: -32px;
+}
+svg.Accordion-body__content--inside__icon--users {
+  width: 36%;
+  margin-top: -2px;
+}
+/* End Toggle Style */

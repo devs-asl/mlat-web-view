@@ -153,24 +153,24 @@ button.toggle__color.navbar-toggler {
 #Accordions {
   position: absolute;
 }
-.Accordions__left {
+#Accordions .Accordions__left {
   width: 350px;
   margin: 17px 0px 0px 17px;
 }
-.accordion-item:first-of-type .accordion-button {
+#Accordions .accordion-item:first-of-type .accordion-button {
   background: #092359;
   color: white;
 }
-.accordion-item:last-of-type .accordion-button {
+#Accordions .accordion-item:last-of-type .accordion-button {
   background: #092359;
   color: white;
 }
 
-.accordion-body {
+#Accordions .accordion-body {
   padding: 1rem 1.25rem;
   background: #4f6695 !important;
 }
-.Accordion-Header--live {
+#Accordions .Accordion-Header--live {
   background: #ffc108;
   margin-left: 11px;
   font-size: 14px;
@@ -179,7 +179,7 @@ button.toggle__color.navbar-toggler {
   border-radius: 2px;
   text-transform: uppercase;
 }
-p.Accordion-Header--question {
+#Accordions p.Accordion-Header--question {
   margin: -1px;
   margin-left: 10px;
   border: 2px solid #4f6695;
@@ -189,53 +189,233 @@ p.Accordion-Header--question {
   padding: 0px 3px 0px 3px;
   border-radius: 10px;
 }
-.Accordion-body__content--inside {
+#Accordions .Accordion-body__content--inside {
   background: #092359;
   border-radius: 4px;
   padding-bottom: 20px;
   margin-bottom: 5px;
 
 }
-.Accordion-body__content {
+#Accordions .Accordion-body__content {
   margin-left: -11px;
   margin-right: -11px;
 }
-.Accordion-body__content--inside ul li {
+#Accordions .Accordion-body__content--inside ul li {
   list-style: none;
 }
-.Accordion-body__content--inside__number {
+#Accordions .Accordion-body__content--inside__number {
   color: white;
   margin-left: -19px;
 }
-.Accordion-body__content--inside__number {
+#Accordions .Accordion-body__content--inside__number {
   color: white;
     margin-left: 17px;
     font-weight: 600;
     font-size: 24px;
     padding-top: 11px;
 }
-span.Accordion-body__content--inside__content {
+#Accordions span.Accordion-body__content--inside__content {
   margin-left: 43px;
     color: white;
     display: block;
     margin-top: -40px;
     font-size: 15px;
 }
-small.Accordion-body__content--inside__content-small {
+#Accordions small.Accordion-body__content--inside__content-small {
   color: white;
     display: block;
     margin-left: 42px;
     margin-top: -21px;
     font-size: 12px;
 }
-.Accordion-body__content--inside__icon {
+#Accordions .Accordion-body__content--inside__icon {
   color: #faa718;
   margin-left: 264px;
   font-weight: 600;
   margin-top: -32px;
 }
-svg.Accordion-body__content--inside__icon--users {
+#Accordions svg.Accordion-body__content--inside__icon--users {
   width: 36%;
   margin-top: -2px;
 }
 /* End Toggle Style */
+
+/* Start Flight Details Style */
+.flight-details__modal {
+  position: fixed;
+    bottom: 0;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform .3s ease-in-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 12px;
+    width: 40%;
+
+}
+.flight-details__modal--image img {
+  height: 14em;
+  border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+span.flight-details__modal--image__button {
+  position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #f5f3f3;
+    border-radius: 19px;
+    padding: 1px 1px 0px 1px;
+    font-size: 14px;
+}
+.flight-details__modal--body {
+  background: #4f6695 !important;
+  flex-grow: 1;
+  padding: 1.3rem 1rem;
+  overflow-y: auto;
+}
+.flight-details__modal--image__after-bg-image {
+  width: 91%;
+    height: 58px;
+    position: absolute;
+    background: white;
+    margin-left: 16px;
+    margin-top: -30px;
+    border-radius: 8px;
+
+}
+.flight-details__modal--image__after-bg-image-logo img {
+  width: 100%;
+  height: 65%;
+}
+
+.flight-details__modal--image__after-bg-image-logo {
+  width: 61%;
+    padding: 16px 0px 0px 8px;
+}
+.flight-details__modal--image__after-bg-image__column {
+  border-right: 1px solid gainsboro;
+  height: 58px;
+}
+.flight-details__modal--image__after-bg-image-logo span {
+  display: block;
+  margin-top: -17px;
+  font-size: 12px;
+  color: #000143;
+  font-weight: 500;
+}
+.flight-details__modal--image__after-bg-image-logo p {
+  font-size: 12px;
+  color: #7a7777;
+}
+.flight-details__modal__boby-content {
+  padding: 14px;
+  background: #f9f7f7;
+}
+.flight-details__modal__boby-content--inside-content {
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  padding-bottom: 28px;
+}
+.col.flight-details__modal__boby-content--inside-content__doh img {
+  width: 50px;
+    transform: translateY(38%);
+    margin-left: 15px;
+}
+.col.flight-details__modal__boby-content--inside-content__doh small {
+  font-size: 12px;
+  color: #8b8989;
+  display: block;
+}
+.col.flight-details__modal__boby-content--inside-content__dac small {
+  font-size: 12px;
+  color: #8b8989;
+  display: block;
+}
+small.col.flight-details__modal__boby-content--inside-content__doh--time {
+  display: block;
+  margin-top: -4px;
+  font-size: 11px;
+}
+small.col.flight-details__modal__boby-content--inside-content__dac--time {
+  display: block;
+  margin-top: -4px;
+  font-size: 11px;
+}
+.col.flight-details__modal__boby-content--inside-content__dac small {
+  font-size: 12px;
+  color: #8b8989;
+  display: block;
+}
+.col.flight-details__modal__boby-content--inside-content__dac {
+  text-align: right;
+}
+.col.flight-details__modal__boby-content--inside-content__dac h2 {
+  color: #000143;
+}
+.col.flight-details__modal__boby-content--inside-content__doh h2 {
+  color: #000143;
+}
+.flight-details__modal__boby-content--table table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.flight-details__modal__boby-content--table td, th {
+  border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+border-bottom: 1px solid #f9f7f7;
+border-right: 1px solid #f9f7f7;
+font-size: 11px;
+text-transform: uppercase;
+color: #7f7c7c;
+}
+
+.flight-details__modal__boby-content--table tr {
+  background-color: #dddddd;
+  padding-bottom: 2px;
+}
+.flight-details__modal__boby-content--table td small {
+  color: #8b8989;
+  font-weight: 500;
+  font-size: 10px;
+  margin-left: 2px;
+}
+.flight-details__modal__boby-content--table td span {
+  float: right;
+  color: #4c4b4b;
+  font-weight: fo;
+  font-weight: 500;
+  font-size: 14px;
+}
+button.accordion-button img {
+  width: 22px;
+  margin: auto;
+  margin-left: 60px;
+}
+.flight-details__Accordion .accordion-item:first-of-type .accordion-button {
+  background: #4f6695;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.flight-details__Accordion .accordion-item:last-of-type .accordion-button {
+  background: #4f6695;
+  color: white;
+}
+button.accordion-button {
+  font-size: 14px;
+  padding-right: 60px;
+  font-weight: 600;
+}
+.flight-details__Accordion__more-info {
+  display: flex;
+}
+.flight-details__Accordion {
+  padding-top: 11px;
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View Aircraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/medias/icons/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+  <header class="brand-bg-extra-dark main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand company-logo" href="#"><img src="assets/medias/logo-v2.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars text-white"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-center" id="navbarMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link hover active text-white font-weight-300 position-relative" aria-current="page" href="#">Apps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Data</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hover-dropdown text-light-custom font-weight-300 position-relative" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Recovery
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item font-weight-300" href="#">Action</a></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Another action</a></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="view-aircraft.html">View Aircraft</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Social</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">About</a>
+              </li>
+            </ul>
+            <!-- <li class="nav-item">
+              <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="login.html"><i class="far fa-user font-weight-600"></i> &nbsp; Login</a>
+            </li> -->
+            <div class="dropdown custom login pe-3">
+                <div class="collapse navbar-collapse d-flex" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light-custom font-weight-300" href="login.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="far fa-user font-weight-600"></i> &nbsp; Login
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                          <li class="dropdown-item">Md. Ahasan Habib</li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item d-flex justify-content-between" href="#">
+                            <i class="fas fa-users-cog align-self-center pe-3 brand-text-light"></i> &nbsp;
+                            <div>
+                              <h5>Settings</h5>
+                              <p>Profile settings and more</p>
+                            </div>
+                          </a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li class="py-3 ps-2">
+                            <a class="button btn btn-sm btn-success py-2 px-3 brand-bg-light brand-bg-light-hover brand-border-light brand-border-light-hover" href="#"><i class="fas fa-lock"></i> &nbsp; Sign Out</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </nav>
+</header>
+<section class="main-section-view-aircraft padding-top-55px padding-bottom-100px">
+
+
+  <div class="view-aircraft-table pt-4">
+    <div class="container-fluid">
+      <h3 class="fw-700">Aircraft List </h3>
+      <h6><strong>Total Aircraft: </strong> 9 ADB-B: 6 MLAT: 3 Flarm: 0   |   <strong>Active: </strong> 9 ADB-B: 6 MLAT: 3 Flarm: 0</h6>
+      <div class="table-responsive pt-3 border-top-1px-light-gray">
+        <table class="table table-striped table-bordered" id="sortTable">
+          <thead class="table-light">
+              <tr>
+                  <th>Registrtion</th>
+                  <th>Mode-S</th>
+                  <th>Flight</th>
+                  <th>Origin</th>
+                  <th>Origin Name</th>
+                  <th>Destination</th>
+                  <th>Destination Name</th>
+                  <th>Track</th>
+                  <th>Magn. Heading</th>
+                  <th>True Heading</th>
+                  <th>Altitude</th>
+                  <th>GNSS Altitude</th>
+                  <th>Speed</th>
+                  <th>IAS</th>
+                  <th>TAS</th>
+                  <th>Vertical Rate</th>
+                  <th>GND/AIR</th>
+                  <th>Type</th>
+                  <th>Category</th>
+                  <th>Track</th>
+                  <th>Magn. Heading</th>
+                  <th>True Heading</th>
+                  <th>Altitude</th>
+                  <th>GNSS Altitude</th>
+                  <th>Speed</th>
+                  <th>IAS</th>
+                  <th>TAS</th>
+                  <th>Vertical Rate</th>
+                  <th>GND/AIR</th>
+                  <th>Type</th>
+                  <th>Category</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>S2-AHM</td>
+                  <td>702041</td>
+                  <td>BBC40</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>10</td>
+                  <td></td>
+                  <td></td>
+                  <td>16200</td>
+                  <td>16900</td>
+                  <td>424</td>
+                  <td></td>
+                  <td></td>
+                  <td>-1920</td>
+                  <td>Air</td>
+                  <td>B77W</td>
+                  <td>A5</td>
+                  <td>80</td>
+                  <td></td>
+                  <td></td>
+                  <td>16200</td>
+                  <td>16900</td>
+                  <td>424</td>
+                  <td></td>
+                  <td></td>
+                  <td>-1920</td>
+                  <td>Air</td>
+                  <td>B77W</td>
+                  <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>50</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>60</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>20</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+              <tr>
+                <td>S2-AHM</td>
+                <td>702041</td>
+                <td>BBC40</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>16200</td>
+                <td>16900</td>
+                <td>424</td>
+                <td></td>
+                <td></td>
+                <td>-1920</td>
+                <td>Air</td>
+                <td>B77W</td>
+                <td>A5</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+    
+    </div>
+
+  </div>
+</section>
+<section class="footer">
+  <div class="container-fluid ps-0 pe-0">
+    <div class="footer-content d-flex justify-content-between bg-black">
+      <div class="left"><p class="text-white my-0 p-3">Copyright © 2021 BANE. &nbsp; All rights reserved.</p></div>
+      <div class="right"><p class="text-white my-0 p-3">Version 1.0</p></div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/c12324853f.js" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+  $('#sortTable').DataTable();
+  </script>
+
+</body>
+</html>

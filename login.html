@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View Aircraft</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/medias/icons/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <header class="brand-bg-extra-dark main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand company-logo" href="#"><img src="assets/medias/logo-v2.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars text-white"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-center" id="navbarMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link hover active text-white font-weight-300 position-relative" aria-current="page" href="#">Apps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Data</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hover-dropdown text-light-custom font-weight-300 position-relative" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Recovery
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item font-weight-300" href="#">Action</a></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Another action</a></li>
+                  <li><a class="dropdown-item font-weight-300" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="view-aircraft.html">View Aircraft</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">Social</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="#">About</a>
+              </li>
+            </ul>
+            <!-- <li class="nav-item">
+              <a class="nav-link hover text-light-custom font-weight-300 position-relative" href="login.html"><i class="far fa-user font-weight-600"></i> &nbsp; Login</a>
+            </li> -->
+            <div class="dropdown custom login pe-3">
+                <div class="collapse navbar-collapse d-flex" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light-custom font-weight-300" href="login.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="far fa-user font-weight-600"></i> &nbsp; Login
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                          <li class="dropdown-item">Md. Ahasan Habib</li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item d-flex justify-content-between" href="#">
+                            <i class="fas fa-users-cog align-self-center pe-3 brand-text-light"></i> &nbsp;
+                            <div>
+                              <h5>Settings</h5>
+                              <p>Profile settings and more</p>
+                            </div>
+                          </a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li class="py-3 ps-2">
+                            <a class="button btn btn-sm btn-success py-2 px-3 brand-bg-light brand-bg-light-hover brand-border-light brand-border-light-hover" href="#"><i class="fas fa-lock"></i> &nbsp; Sign Out</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </nav>
+</header>
+<section class="main-section-for-login padding-top-55px padding-bottom-100px" style="background-image: url('assets/medias/bg-for-login-and-resistration.jpg');">
+  <div class="login-content text-center">
+    <form>
+      <h2 class="pb-4">Login</h2>
+      <div class="mb-4">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Type email address">
+      </div>
+      <div class="mb-2">
+        <input type="password" class="form-control" id="exampleInputPassword1"placeholder="Type password">
+      </div>
+      <div class="mb-3 form-check text-start">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
+        <label class="form-check-label text-white float-right"><a class="brand-text-orange" href="#">Forgot Password?</a></label>
+      </div>
+      <button type="submit" class="btn btn-primary brand-bg-orange brand-bg-orange-hover brand-border-orange brand-border-orange-hover w-70 border-radius-full text-center mt-4">SUBMIT</button>
+      <div class="mb-3 form-check text-center pt-3 ps-0">
+        <label class="form-check-label text-white">Don't have a MLAT account? <a class="brand-text-orange" href="registration.html">Create a new account</a></label>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container-fluid ps-0 pe-0">
+    <div class="footer-content d-flex justify-content-between bg-black">
+      <div class="left"><p class="text-white my-0 p-3">Copyright © 2021 BANE. &nbsp; All rights reserved.</p></div>
+      <div class="right"><p class="text-white my-0 p-3">Version 1.0</p></div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/c12324853f.js" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+  $('#sortTable').DataTable();
+  </script>
+
+</body>
+</html>

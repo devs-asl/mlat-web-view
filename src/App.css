@@ -58,6 +58,7 @@ a.link1:hover::after {
     display: block;
     padding-bottom: 3px;
     position: absolute;
+    margin-left: -8px;
 }
 .drop.active_class {
   color: #79799c;
@@ -141,11 +142,14 @@ button:focus {
   color: #faa719;
   font-size: 18px;
   margin-right: 10px;
+  margin-top: 12px;
 }
 button.toggle__color.navbar-toggler {
   background-color:  #dee2e6;
 }
-
+.main__newnav.navbar-nav {
+  margin-top: -4px;
+}
 /* End Header Style */
 
 /* Start Toggle Style */
@@ -243,7 +247,7 @@ button.toggle__color.navbar-toggler {
 /* Start Flight Details Style */
 .flight-details__modal {
   position: fixed;
-    bottom: 0;
+    bottom: 44px;
     z-index: 1045;
     display: flex;
     flex-direction: column;
@@ -255,18 +259,19 @@ button.toggle__color.navbar-toggler {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-left: 12px;
-    width: 40%;
+    height: 625px;
 
 }
 .flight-details__modal--image img {
   height: 14em;
   border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    width: 96.5%;
 }
 span.flight-details__modal--image__button {
   position: absolute;
     top: 8px;
-    right: 8px;
+    right: 24px;
     background: #f5f3f3;
     border-radius: 19px;
     padding: 1px 1px 0px 1px;
@@ -277,6 +282,7 @@ span.flight-details__modal--image__button {
   flex-grow: 1;
   padding: 1.3rem 1rem;
   overflow-y: auto;
+  width: 96.5%;
 }
 .flight-details__modal--image__after-bg-image {
   width: 91%;
@@ -287,6 +293,9 @@ span.flight-details__modal--image__button {
     margin-top: -30px;
     border-radius: 8px;
 
+}
+.flight-details__Accordion .accordion-item button {
+  height: 5vh;
 }
 .flight-details__modal--image__after-bg-image-logo img {
   width: 100%;
@@ -313,8 +322,9 @@ span.flight-details__modal--image__button {
   color: #7a7777;
 }
 .flight-details__modal__boby-content {
-  padding: 14px;
+  padding: 9px;
   background: #f9f7f7;
+  width: 96.5%;
 }
 .flight-details__modal__boby-content--inside-content {
   background: white;
@@ -368,12 +378,13 @@ small.col.flight-details__modal__boby-content--inside-content__dac--time {
 .flight-details__modal__boby-content--table td, th {
   border: 1px solid #dddddd;
 text-align: left;
-padding: 8px;
+padding: 3px;
 border-bottom: 1px solid #f9f7f7;
 border-right: 1px solid #f9f7f7;
 font-size: 11px;
 text-transform: uppercase;
 color: #7f7c7c;
+padding-top: 3px;
 }
 
 .flight-details__modal__boby-content--table tr {
@@ -397,6 +408,7 @@ button.accordion-button img {
   width: 22px;
   margin: auto;
   margin-left: 60px;
+  margin-top: -5px;
 }
 .flight-details__Accordion .accordion-item:first-of-type .accordion-button {
   background: #4f6695;
@@ -419,3 +431,201 @@ button.accordion-button {
 .flight-details__Accordion {
   padding-top: 11px;
 }
+.body.accordion-body {
+  padding: 0px;
+}
+.flight-details__Accordion--more-info-inside img {
+  width: 22px;
+}
+.flight-details__Accordion--more-info-inside {
+  background: gainsboro;
+  padding: 10px;
+}
+.flight-details__Accordion__more-info__type {
+  padding: 5px 0px 8px 0px;
+}
+tr.flight-details__Accordion__more-info__type--table {
+  border-bottom: 1px solid #ebeaea;
+}
+.flight-details__Accordion__more-info__type table tr td small {
+  display: block;
+  color: #484545;
+  font-size: 12px;
+}
+.flight-details__Accordion__more-info__type table tr td {
+  padding-bottom: 8px;
+  font-size: 12px;
+  color: #7c7a7a;
+  font-weight: 500;
+  padding-right: 36px;
+  padding-left: 8px;
+}
+.flight-details__Accordion__more-info__type--color {
+  background: maroon;
+  width: 28px;
+  height: 15px;
+  margin-top: 3px;
+  border: 1px solid;
+}
+.flight-details__Accordion .accordion {
+  padding-bottom: 8px;
+}
+/* End Flight Details Style */
+
+/* Start Flight Details Footer Style */
+.flight-details__modal--footer__inside {
+  background: #000143;
+  display: flex;
+  height: 59px;
+  width: 96.5%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-content: space-evenly;
+}
+
+.flight-details__modal--footer__inside--image img {
+  margin-top: 9px;
+  width: 23px;
+}
+small.flight-details__modal--footer__inside--image--content {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  line-height: 21px;
+}
+small.flight-details__modal--footer__inside--image--content2 {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  line-height: 21px;
+  margin-top: 9px;
+}
+small.flight-details__modal--footer__inside--image--content1 {
+  color: #faa719;
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  line-height: 21px;
+}
+img.flight-details__modal--footer__inside--image__change {
+  margin-bottom: 5px;
+}
+/* End Flight Details Footer Style */
+
+/* Start Footer Style */
+
+footer.flight-details-footer {
+  position: fixed;
+  height: 44px;
+  background: black;
+  bottom: 0;
+  width: 100%;
+}
+.flight-details-footer__content {
+  text-align: center;
+  margin-top: 13px;
+  font-size: 12px;
+  color: #979696;
+  font-weight: 600;
+}
+/* End Footer Style */
+
+/* Start Registration & Login Style */
+
+.registration__image img {
+  width: 100%;
+  background-position: center;
+  height: 92vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.registration__image__form {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 15%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.registration__image {
+  position: relative;
+}
+form.registration__image__form--inside h2 {
+  color: white;
+  padding: 0px 0px 21px 0px;
+}
+form.registration__image__form--inside {
+  width: 30%;
+  text-align: center;
+}
+form.registration__image__form--inside {
+  width: 24%;
+  text-align: center;
+  background: #FFFFFF14;
+  padding: 1.3em;
+  border: 1px solid #ffffff47;
+  border-radius: 5px;
+  padding-bottom: 40px;
+}
+button.registration__image__form--inside__content--button.btn.btn-primary {
+  border: #faa718;
+  transition: all 0.3s ease-in-out;
+  background: #faa718;
+  text-transform: uppercase;
+  width: 76%;
+  border-radius: 19px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+button.registration__image__form--inside__content--button.btn.btn-primary:hover{
+  width: 85% !important;
+}
+small#text1.text-muted.form-text a {
+  
+  color: #faa719;
+  margin-left: 4px;
+  text-decoration: none;
+}
+small.text-muted.form-text a {
+  
+  color: #faa719!important;
+  margin-left: 4px;
+  text-decoration: none;
+}
+small#text1.text-muted.form-text {
+  font-weight: 500;
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+  font-size: 12px;
+}
+small.text-muted.form-text {
+  font-weight: 500;
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+  font-size: 12px;
+}
+form.registration__image__form--inside input {
+  font-size: 14px;
+  font-weight: 400;
+}
+.form-check {
+  text-align: left;
+  color: white;
+  display: block;
+  font-size: 13px;
+}
+small#text {
+  display: block;
+  text-align: right;
+  margin-top: -39px;
+  font-weight: 500;
+  --bs-text-opacity: 1;
+  color: #faa719!important;
+  font-size: 12px;
+}
+/* End Registration & Login Style */

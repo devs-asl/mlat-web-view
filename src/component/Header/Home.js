@@ -1,12 +1,22 @@
 import React, {useState} from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { FaUsers } from "react-icons/fa";
+import Modalflight from './Modalflight';
 
 
 const Apps = () => {
+  const [show, setShow] = useState(false);
+  
     return (
       // Toggle sidebar
        <div>
+       <div className="text-center flight-details">
+                <button className="btn btn-primary" id="flight-details__button" onClick={() => setShow(true)}>
+                   Click On Aircrafts
+                </button>
+              </div>
+              <Modalflight show={show} onClose={() => setShow(false)}/>
+       
         <section id="Accordions">
            <div className="Accordions__left">
            <Accordion>
@@ -116,6 +126,8 @@ const Apps = () => {
 </Accordion>
            </div>
         </section>
+       
+        
         </div>
     )
 }

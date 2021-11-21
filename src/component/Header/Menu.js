@@ -25,15 +25,28 @@ const Menu = () => {
         <NavLink className="link1" to="/">About</NavLink> 
       </Nav>
     </Navbar.Collapse>
-    <Dropdown>
+
+    <Nav className="main__newnav">
+    <FaUserCircle className="dropdown-basic__icon"/><NavLink className="link1" to="/signin">Sign In</NavLink>
+    <NavLink className="link1" to="/registration">Sign Up</NavLink>
+       
+      </Nav>
+
+    {/* <Dropdown>
   <Dropdown.Toggle id="dropdown-basic">
-  <FaUserCircle className="dropdown-basic__icon"/>Log In
+  <FaUserCircle className="dropdown-basic__icon"/>Sign In
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="drop-menu">
-    <Dropdown.Item href="#/action-1">Log Out</Dropdown.Item>
+    <Dropdown.Item href="#/action-1" to="/registration">Sign Out</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
+
+<Dropdown>
+  <Dropdown id="dropdown-basic">
+  Sign Up
+  </Dropdown>
+</Dropdown> */}
   </Container>
 </Navbar>
         </div>

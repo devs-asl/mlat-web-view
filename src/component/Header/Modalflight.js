@@ -1,6 +1,5 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-
 const Modalflight = ({show, onClose}) => {
   
   if (!show) {
@@ -44,7 +43,11 @@ const Modalflight = ({show, onClose}) => {
                   
                 </div>
                </div>
-               <div className="flight-details__modal__boby-content">
+               
+               <div className="flight-details__modal__boby-content" style={{
+      maxHeight: 'calc(100vh - 210px)',
+      overflowY: 'auto'
+     }}>
                  <div className="flight-details__modal__boby-content--inside-content">
                  <div className="row">
                   <div className="col flight-details__modal__boby-content--inside-content__doh">
@@ -82,7 +85,7 @@ const Modalflight = ({show, onClose}) => {
                <Accordion defaultActiveKey="0">
   <Accordion.Item eventKey="0">
     <Accordion.Header><img src="/Images/more-flight-info-icon.svg"/>More QR634 information</Accordion.Header>
-    <Accordion.Body>
+    <Accordion.Body className="body">
       <div className="flight-details__Accordion__more-info">
       <div className="flight-details__Accordion--more-info-inside">
       <img src="/Images/aircraft-type.svg"/>
@@ -90,16 +93,27 @@ const Modalflight = ({show, onClose}) => {
         <div className="flight-details__Accordion__more-info__type">
         <table>
   
-  <tr>
-    <td>Maria Anders</td>
+  <tr className="flight-details__Accordion__more-info__type--table">
+    <td>AIRCRFT TYPE (A333)<br/>
+    <small className="flight-details__Accordion__more-info__type--small1">Airbus A330-302</small>
+    </td>
+    
   </tr>
   <tr>
-    <td>Francisco Chaa</td>
-    <td>Mexico</td>
+    <td>REGISTRATION<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">A7-AED</small>
+    </td>
+    <td>COUNTRY OF REG.
+    <div className="flight-details__Accordion__more-info__type--color"></div>
+    </td>
   </tr>
   <tr>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
+  <td>SERIAL NUMBER (MSN)<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">0680</small>
+    </td>
+    <td>AGE (JUL 2005)<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">16 years</small>
+    </td>
   </tr>
   
 </table>
@@ -107,24 +121,83 @@ const Modalflight = ({show, onClose}) => {
       </div>
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header>Accordion Item #2</Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+
+</Accordion>
+ <Accordion defaultActiveKey="0">
+  <Accordion.Item eventKey="0">
+    <Accordion.Header><img src="/Images/more-flight-info-icon.svg"/>More QR634 information</Accordion.Header>
+    <Accordion.Body className="body">
+      <div className="flight-details__Accordion__more-info">
+      <div className="flight-details__Accordion--more-info-inside">
+      <img src="/Images/aircraft-type.svg"/>
+        </div>
+        <div className="flight-details__Accordion__more-info__type">
+        <table>
+  
+  <tr className="flight-details__Accordion__more-info__type--table">
+    <td>AIRCRFT TYPE (A333)<br/>
+    <small className="flight-details__Accordion__more-info__type--small1">Airbus A330-302</small>
+    </td>
+    
+  </tr>
+  <tr>
+    <td>REGISTRATION<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">A7-AED</small>
+    </td>
+    <td>COUNTRY OF REG.
+    <div className="flight-details__Accordion__more-info__type--color"></div>
+    </td>
+  </tr>
+  <tr>
+  <td>SERIAL NUMBER (MSN)<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">0680</small>
+    </td>
+    <td>AGE (JUL 2005)<br/>
+    <small className="flight-details__Accordion__more-info__type--small2">16 years</small>
+    </td>
+  </tr>
+  
+</table>
+        </div>
+      </div>
     </Accordion.Body>
   </Accordion.Item>
+
 </Accordion>
                </div>
                </div>
-
               
+                  <div className="flight-details__modal--footer">
+                  <div className="flight-details__modal--footer__inside">
+                  <div className="flight-details__modal--footer__inside--image">
+                  <img src="/Images/flight-details-footer-icon-1.svg"/><br/>
+                    <small className="flight-details__modal--footer__inside--image--content">3D view</small>
+                  </div>
+                  
+                  <div className="flight-details__modal--footer__inside--image">
+                  <img src="/Images/flight-details-footer-icon-2.svg" className="flight-details__modal--footer__inside--image__change"/><br/>
+                  <small className="flight-details__modal--footer__inside--image--content">Route</small>
 
+                  </div>
+                  
+                  <div className="flight-details__modal--footer__inside--image">
+                  <img src="/Images/flight-details-footer-icon-3.svg" className="flight-details__modal--footer__inside--image__change1"/><br/>
+                  <small className="flight-details__modal--footer__inside--image--content">Follow</small>
+
+                   </div>
+                  
+                  <div className="flight-details__modal--footer__inside--image">
+                  <img src="/Images/flight-details-footer-icon-4.svg"/><br/>
+                  <small className="flight-details__modal--footer__inside--image--content">Share</small>
+
+                  </div>
+                  
+                  <div className="flight-details__modal--footer__inside--image">
+                  <img src="/Images/flight-details-footer-icon-5.svg" className="flight-details__modal--footer__inside--image__change2"/><br/>
+                  <small className="flight-details__modal--footer__inside--image--content2">More</small>
+                  </div>
+                   </div>
+                  </div>
                </div>
             </section>
         </div>

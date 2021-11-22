@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 
 /* Start Header Style */
-.main{
-  font-family: 'Lato', sans-serif !important;
+.main {
+  font-family: "Lato", sans-serif !important;
   background-color: #000143;
   color: #79799c;
-  
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
 }
 .logo {
   margin-top: -16px;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0,0,0,);
+  color: rgba(0, 0, 0);
 }
 .navbar-nav {
   margin: auto;
@@ -27,19 +29,19 @@ a.link1 {
   color: #79799c;
   text-decoration: none;
   margin-top: 7px;
-padding-right: 31px;
+  padding-right: 31px;
 }
 a.link2 {
   color: #79799c;
   text-decoration: none;
   margin-top: 7px;
-padding-right: 31px;
+  padding-right: 31px;
 }
 a.active_class {
   color: #79799c;
   color: white;
 }
-a.link1:hover{
+a.link1:hover {
   color: white;
 }
 a.link1:hover::after {
@@ -50,15 +52,14 @@ a.link1:hover::after {
 }
 a.link1:hover::after {
   content: "";
-    width: 3.5%;
-    background: #FAA718;
-    z-index: 999999;
-    border-radius: 2px 2px 0px 0px;
-    bottom: 0px;
-    display: block;
-    padding-bottom: 3px;
-    position: absolute;
-    margin-left: -8px;
+  width: 4%;
+  background: #faa718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: 0px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
 }
 .drop.active_class {
   color: #79799c;
@@ -75,20 +76,19 @@ a#basic-nav-dropdown:hover {
 }
 .drop.nav-item.dropdown:hover::after {
   content: "";
-    width: 92.5%;
-    background: #FAA718;
-    z-index: 999999;
-    border-radius: 2px 2px 0px 0px;
-    bottom: -8px;
-    display: block;
-    padding-bottom: 3px;
-    position: absolute;
-
+  width: 92.5%;
+  background: #faa718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: -8px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
 }
 a.active_class::after {
   content: "";
   width: 3.5%;
-  background: #FAA718;
+  background: #faa718;
   z-index: 999999;
   border-radius: 2px 2px 0px 0px;
   bottom: 0px;
@@ -98,8 +98,8 @@ a.active_class::after {
 }
 a.link2.active_class::after {
   content: "";
-  width: 7%;
-  background: #FAA718;
+  width: 8%;
+  background: #faa718;
   z-index: 999999;
   border-radius: 2px 2px 0px 0px;
   bottom: 0px;
@@ -107,7 +107,7 @@ a.link2.active_class::after {
   padding-bottom: 3px;
   position: absolute;
 }
-.link2:hover{
+.link2:hover {
   color: white;
 }
 a.link2:hover::after {
@@ -118,14 +118,14 @@ a.link2:hover::after {
 }
 a.link2:hover::after {
   content: "";
-    width: 7%;
-    background: #FAA718;
-    z-index: 999999;
-    border-radius: 2px 2px 0px 0px;
-    bottom: 0px;
-    display: block;
-    padding-bottom: 3px;
-    position: absolute;
+  width: 8%;
+  background: #faa718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: 0px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
 }
 button#dropdown-basic {
   background-color: #000143;
@@ -145,14 +145,23 @@ button:focus {
   margin-top: 12px;
 }
 button.toggle__color.navbar-toggler {
-  background-color:  #dee2e6;
+  background-color: #dee2e6;
 }
 .main__newnav.navbar-nav {
   margin-top: -4px;
 }
+a.main__newnav.navbar-nav.link2 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+  padding-right: 31px;
+}
 /* End Header Style */
 
 /* Start Toggle Style */
+.text-center.flight-details {
+  padding-top: 65px;
+}
 
 #Accordions {
   position: absolute;
@@ -198,7 +207,6 @@ button.toggle__color.navbar-toggler {
   border-radius: 4px;
   padding-bottom: 20px;
   margin-bottom: 5px;
-
 }
 #Accordions .Accordion-body__content {
   margin-left: -11px;
@@ -213,24 +221,24 @@ button.toggle__color.navbar-toggler {
 }
 #Accordions .Accordion-body__content--inside__number {
   color: white;
-    margin-left: 17px;
-    font-weight: 600;
-    font-size: 24px;
-    padding-top: 11px;
+  margin-left: 17px;
+  font-weight: 600;
+  font-size: 24px;
+  padding-top: 11px;
 }
 #Accordions span.Accordion-body__content--inside__content {
   margin-left: 43px;
-    color: white;
-    display: block;
-    margin-top: -40px;
-    font-size: 15px;
+  color: white;
+  display: block;
+  margin-top: -40px;
+  font-size: 15px;
 }
 #Accordions small.Accordion-body__content--inside__content-small {
   color: white;
-    display: block;
-    margin-left: 42px;
-    margin-top: -21px;
-    font-size: 12px;
+  display: block;
+  margin-left: 42px;
+  margin-top: -21px;
+  font-size: 12px;
 }
 #Accordions .Accordion-body__content--inside__icon {
   color: #faa718;
@@ -247,52 +255,50 @@ button.toggle__color.navbar-toggler {
 /* Start Flight Details Style */
 .flight-details__modal {
   position: fixed;
-    bottom: 44px;
-    z-index: 1045;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    background-color: #fff;
-    background-clip: padding-box;
-    outline: 0;
-    transition: transform .3s ease-in-out;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin-left: 12px;
-    height: 625px;
-
+  bottom: 44px;
+  z-index: 1045;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform 0.3s ease-in-out;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 12px;
+  height: 85vh;
 }
 .flight-details__modal--image img {
   height: 14em;
   border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 96.5%;
+  border-top-right-radius: 5px;
+  width: 100%;
 }
 span.flight-details__modal--image__button {
   position: absolute;
-    top: 8px;
-    right: 24px;
-    background: #f5f3f3;
-    border-radius: 19px;
-    padding: 1px 1px 0px 1px;
-    font-size: 14px;
+  top: 8px;
+  right: 8px;
+  background: #f5f3f3;
+  border-radius: 19px;
+  padding: 1px 1px 0px 1px;
+  font-size: 14px;
 }
 .flight-details__modal--body {
   background: #4f6695 !important;
   flex-grow: 1;
   padding: 1.3rem 1rem;
   overflow-y: auto;
-  width: 96.5%;
+  width: 100%;
 }
 .flight-details__modal--image__after-bg-image {
-  width: 91%;
-    height: 58px;
-    position: absolute;
-    background: white;
-    margin-left: 16px;
-    margin-top: -30px;
-    border-radius: 8px;
-
+  width: 86%;
+  height: 58px;
+  position: absolute;
+  background: white;
+  margin-left: 23px;
+  margin-top: -30px;
+  border-radius: 8px;
 }
 .flight-details__Accordion .accordion-item button {
   height: 5vh;
@@ -304,7 +310,7 @@ span.flight-details__modal--image__button {
 
 .flight-details__modal--image__after-bg-image-logo {
   width: 61%;
-    padding: 16px 0px 0px 8px;
+  padding: 16px 0px 0px 8px;
 }
 .flight-details__modal--image__after-bg-image__column {
   border-right: 1px solid gainsboro;
@@ -324,7 +330,7 @@ span.flight-details__modal--image__button {
 .flight-details__modal__boby-content {
   padding: 9px;
   background: #f9f7f7;
-  width: 96.5%;
+  width: 100%;
 }
 .flight-details__modal__boby-content--inside-content {
   background: white;
@@ -334,8 +340,8 @@ span.flight-details__modal--image__button {
 }
 .col.flight-details__modal__boby-content--inside-content__doh img {
   width: 50px;
-    transform: translateY(38%);
-    margin-left: 15px;
+  transform: translateY(38%);
+  margin-left: 15px;
 }
 .col.flight-details__modal__boby-content--inside-content__doh small {
   font-size: 12px;
@@ -371,20 +377,21 @@ small.col.flight-details__modal__boby-content--inside-content__dac--time {
 .col.flight-details__modal__boby-content--inside-content__doh h2 {
   color: #000143;
 }
-.flight-details__modal__boby-content--table table{
+.flight-details__modal__boby-content--table table {
   border-collapse: collapse;
   width: 100%;
 }
-.flight-details__modal__boby-content--table td, th {
+.flight-details__modal__boby-content--table td,
+th {
   border: 1px solid #dddddd;
-text-align: left;
-padding: 3px;
-border-bottom: 1px solid #f9f7f7;
-border-right: 1px solid #f9f7f7;
-font-size: 11px;
-text-transform: uppercase;
-color: #7f7c7c;
-padding-top: 3px;
+  text-align: left;
+  padding: 3px;
+  border-bottom: 1px solid #f9f7f7;
+  border-right: 1px solid #f9f7f7;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #7f7c7c;
+  padding-top: 3px;
 }
 
 .flight-details__modal__boby-content--table tr {
@@ -477,7 +484,7 @@ tr.flight-details__Accordion__more-info__type--table {
   background: #000143;
   display: flex;
   height: 59px;
-  width: 96.5%;
+  width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   justify-content: space-evenly;
@@ -522,6 +529,7 @@ footer.flight-details-footer {
   background: black;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 .flight-details-footer__content {
   text-align: center;
@@ -533,16 +541,26 @@ footer.flight-details-footer {
 /* End Footer Style */
 
 /* Start Registration & Login Style */
-
-.registration__image img {
-  width: 100%;
+.registration {
+  background-image: url(http://localhost:3000/Images/bg-for-login-and-resistration.jpg);
   background-position: center;
-  height: 92vh;
-  background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 163px;
 }
+
 .registration__image__form {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   position: absolute;
   top: 15%;
   display: flex;
@@ -552,61 +570,57 @@ footer.flight-details-footer {
   align-items: center;
 }
 .registration__image {
-  position: relative;
+  width: 390px;
+  margin: 0 auto;
 }
+
 form.registration__image__form--inside h2 {
   color: white;
   padding: 0px 0px 21px 0px;
 }
+
 form.registration__image__form--inside {
-  width: 30%;
-  text-align: center;
-}
-form.registration__image__form--inside {
-  width: 24%;
-  text-align: center;
-  background: #FFFFFF14;
+  background: #ffffff14;
   padding: 1.3em;
   border: 1px solid #ffffff47;
   border-radius: 5px;
   padding-bottom: 40px;
 }
+
 button.registration__image__form--inside__content--button.btn.btn-primary {
   border: #faa718;
   transition: all 0.3s ease-in-out;
   background: #faa718;
   text-transform: uppercase;
-  width: 76%;
-  border-radius: 19px;
+  width: 80%;
+  border-radius: 25px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 14px;
 }
-button.registration__image__form--inside__content--button.btn.btn-primary:hover{
+button.registration__image__form--inside__content--button.btn.btn-primary:hover {
   width: 85% !important;
 }
 small#text1.text-muted.form-text a {
-  
   color: #faa719;
   margin-left: 4px;
   text-decoration: none;
 }
 small.text-muted.form-text a {
-  
-  color: #faa719!important;
+  color: #faa719 !important;
   margin-left: 4px;
   text-decoration: none;
 }
 small#text1.text-muted.form-text {
   font-weight: 500;
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
   font-size: 12px;
 }
 small.text-muted.form-text {
   font-weight: 500;
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
   font-size: 12px;
 }
 form.registration__image__form--inside input {
@@ -625,7 +639,7 @@ small#text {
   margin-top: -39px;
   font-weight: 500;
   --bs-text-opacity: 1;
-  color: #faa719!important;
+  color: #faa719 !important;
   font-size: 12px;
 }
 /* End Registration & Login Style */

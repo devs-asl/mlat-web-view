@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -21,11 +21,12 @@ const Header = () => {
               <NavLink className="link1" activeClassName="active_class" to="/">
                 App
               </NavLink>
-              <NavLink className="link1" activeClassName="active_class"  to="/data">
+              {/* <NavLink className="link3" to="/">
                 Data
-              </NavLink>
-              <NavDropdown
+              </NavLink> */}
+              {/* <NavDropdown
                 className="drop"
+                activeClassName="active_class"
                 title="Recovery"
                 id="basic-nav-dropdown"
               >
@@ -36,7 +37,7 @@ const Header = () => {
                 <NavDropdown.Item href="#action/3.3">
                   Something
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
               <NavLink
                 className="link2"
                 activeClassName="active_class"
@@ -44,10 +45,10 @@ const Header = () => {
               >
                 View Aircraft
               </NavLink>
-              <NavLink className="link1" to="/">
+              {/* <NavLink className="link4" to="/">
                 Social
-              </NavLink>
-              <NavLink className="link1" to="/">
+              </NavLink> */}
+              <NavLink className="link5" to="/">
                 About
               </NavLink>
             </Nav>

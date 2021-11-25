@@ -21,7 +21,7 @@ const Header = () => {
               <NavLink className="link1" activeClassName="active_class" to="/">
                 App
               </NavLink>
-              <NavLink className="link1" to="/">
+              <NavLink className="link1" activeClassName="active_class"  to="/data">
                 Data
               </NavLink>
               <NavDropdown

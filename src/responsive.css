@@ -9,6 +9,9 @@
   a.link2:hover::after {
     width: 6.5%;
   }
+  a.link2.active_class::after{
+    width: 6.5%;
+  }
   a.link4:hover::after {
     margin-left: 0px;
   }

@@ -8,12 +8,10 @@ const Header = () => {
     <div className="main">
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/" className="logo">
-            <NavLink to="/">
+          <NavLink to="/" className="logo">
                 <img src="/Images/logo-v2.png" alt="Logo"/>
-            </NavLink>
-            
-          </Navbar.Brand>
+
+          </NavLink>
           <Navbar.Toggle
             className="toggle__color"
             aria-controls="basic-navbar-nav"
@@ -28,7 +26,6 @@ const Header = () => {
               </NavLink>
               <NavDropdown
                 className="drop"
-                activeClassName="active_class"
                 title="Recovery"
                 id="basic-nav-dropdown"
               >

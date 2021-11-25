@@ -1,6 +1,49 @@
+@media (max-width: 1590px) {
+  .navbar-nav .link1.active_class::after {
+    /* left: 23.2%; */
+    margin-left: -6px;
+  }
+  a.link3:hover::after {
+    margin-left: -3px;
+  }
+  a.link2:hover::after {
+    width: 6.5%;
+  }
+  a.link4:hover::after {
+    margin-left: 0px;
+  }
+  a.link5:hover::after {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  a.link3:hover::after {
+    width: 4.9%;
+    /* left: 28.3%; */
+  }
+  .navbar-nav .link1.active_class::after {
+    width: 4.9%;
+    /* left: 22.1%; */
+  }
+  a.link2:hover::after {
+    width: 10%;
+  }
+  a.link4:hover::after {
+    width: 4.9%;
+  }
+  a.link5:hover::after {
+    width: 5%;
+    /* left: 66.7%; */
+  }
+  a.link2.active_class::after {
+    width: 10%;
+  }
+}
+
 /* For Large Device */
 @media (max-width: 991px) {
-  a.active_class::after {
+  .navbar-nav .link1.active_class::after {
     padding-bottom: 0px;
   }
   a.link2.active_class::after {
@@ -12,6 +55,16 @@
   a.link1:hover::after {
     padding-bottom: 0px;
   }
+  a.link3:hover::after {
+    padding-bottom: 0px;
+  }
+  a.link4:hover::after {
+    padding-bottom: 0px;
+  }
+  a.link5:hover::after {
+    padding-bottom: 0px;
+  }
+
   .drop.nav-item.dropdown:hover::after {
     padding-bottom: 0px;
   }

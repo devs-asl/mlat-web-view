@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import './Header.css';
 
 const Header = () => {
   return (

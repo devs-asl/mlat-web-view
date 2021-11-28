@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
-const Modalflight = ({ show, onClose }) => {
+const AircraftDetails = ({ show, onClose }) => {
   if (!show) {
     return null;
   }
@@ -12,13 +12,13 @@ const Modalflight = ({ show, onClose }) => {
             <span className="flight-details__modal--image__button">
               <button onClick={onClose} className="btn-close" />
             </span>
-            <img src="/Images/qatar-airways-bg.jpg" />
+            <img src="/Images/qatar-airways-bg.jpg" alt="Aircraft"/>
             <div className="flight-details__modal--image__after-bg-image">
               <div className="row">
                 <div class="col d-flex justify-content-center">
                   <div className="col flight-details__modal--image__after-bg-image__column">
                     <div className="flight-details__modal--image__after-bg-image-logo">
-                      <img src="/Images/qatar-airways-logo.png" />
+                      <img src="/Images/qatar-airways-logo.png" alt="Aircraft" />
                     </div>
                   </div>
 
@@ -59,7 +59,7 @@ const Modalflight = ({ show, onClose }) => {
                 </div>
 
                 <div className="col flight-details__modal__boby-content--inside-content__doh">
-                  <img src="/Images/departure.svg" />
+                  <img src="/Images/departure.svg" alt="Aircraft" />
                 </div>
 
                 <div className="col flight-details__modal__boby-content--inside-content__dac">
@@ -107,13 +107,13 @@ const Modalflight = ({ show, onClose }) => {
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
-                    <img src="/Images/more-flight-info-icon.svg" />
+                    <img src="/Images/more-flight-info-icon.svg" alt="Aircraft" />
                     More QR634 information
                   </Accordion.Header>
                   <Accordion.Body className="body">
                     <div className="flight-details__Accordion__more-info">
                       <div className="flight-details__Accordion--more-info-inside">
-                        <img src="/Images/aircraft-type.svg" />
+                        <img src="/Images/aircraft-type.svg" alt="Aircraft"/>
                       </div>
                       <div className="flight-details__Accordion__more-info__type">
                         <table>
@@ -164,13 +164,13 @@ const Modalflight = ({ show, onClose }) => {
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
-                    <img src="/Images/more-flight-info-icon.svg" />
+                    <img src="/Images/more-flight-info-icon.svg" alt="Aircraft" />
                     More QR634 information
                   </Accordion.Header>
                   <Accordion.Body className="body">
                     <div className="flight-details__Accordion__more-info">
                       <div className="flight-details__Accordion--more-info-inside">
-                        <img src="/Images/aircraft-type.svg" />
+                        <img src="/Images/aircraft-type.svg" alt="Aircraft" />
                       </div>
                       <div className="flight-details__Accordion__more-info__type">
                         <table>
@@ -224,7 +224,7 @@ const Modalflight = ({ show, onClose }) => {
           <div className="flight-details__modal--footer">
             <div className="flight-details__modal--footer__inside">
               <div className="flight-details__modal--footer__inside--image">
-                <img src="/Images/flight-details-footer-icon-1.svg" />
+                <img src="/Images/flight-details-footer-icon-1.svg" alt="Aircraft" />
                 <br />
                 <small className="flight-details__modal--footer__inside--image--content">
                   3D view
@@ -234,7 +234,7 @@ const Modalflight = ({ show, onClose }) => {
               <div className="flight-details__modal--footer__inside--image">
                 <img
                   src="/Images/flight-details-footer-icon-2.svg"
-                  className="flight-details__modal--footer__inside--image__change"
+                  className="flight-details__modal--footer__inside--image__change" alt="Aircraft"
                 />
                 <br />
                 <small className="flight-details__modal--footer__inside--image--content">
@@ -245,7 +245,7 @@ const Modalflight = ({ show, onClose }) => {
               <div className="flight-details__modal--footer__inside--image">
                 <img
                   src="/Images/flight-details-footer-icon-3.svg"
-                  className="flight-details__modal--footer__inside--image__change1"
+                  className="flight-details__modal--footer__inside--image__change1" alt="Aircraft"
                 />
                 <br />
                 <small className="flight-details__modal--footer__inside--image--content">
@@ -254,7 +254,7 @@ const Modalflight = ({ show, onClose }) => {
               </div>
 
               <div className="flight-details__modal--footer__inside--image">
-                <img src="/Images/flight-details-footer-icon-4.svg" />
+                <img src="/Images/flight-details-footer-icon-4.svg" alt="Aircraft" />
                 <br />
                 <small className="flight-details__modal--footer__inside--image--content">
                   Share
@@ -264,7 +264,7 @@ const Modalflight = ({ show, onClose }) => {
               <div className="flight-details__modal--footer__inside--image">
                 <img
                   src="/Images/flight-details-footer-icon-5.svg"
-                  className="flight-details__modal--footer__inside--image__change2"
+                  className="flight-details__modal--footer__inside--image__change2" alt="Aircraft"
                 />
                 <br />
                 <small className="flight-details__modal--footer__inside--image--content2">
@@ -279,4 +279,4 @@ const Modalflight = ({ show, onClose }) => {
   );
 };
 
-export default Modalflight;
+export default AircraftDetails;

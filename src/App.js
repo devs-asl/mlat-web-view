@@ -2,27 +2,31 @@ import React from "react";
 import "./App.css";
 import "./responsive.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Menu from "./component/Header/Menu";
-import ViewAircraft from "./component/Header/ViewAircraft";
-import Home from "./component/Header/Home";
-import Footer from "./component/Header/Footer";
-import Registration from "./component/Header/Registration";
-import SignIn from "./component/Header/SignIn";
+import Home from "./Pages/Home/Home";
+import Registration from "./Pages/Registration/Registration";
+import Login from "./Pages/Login/Login";
+import AircraftListView from "./Pages/AircraftListView/AircraftListView";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <Menu />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/viewaircraft" component={ViewAircraft} />
-          <Route path="/registration" component={Registration} />
-          <Route path="/signin" component={SignIn} />
+          <Route path="/" exact> 
+            <Home></Home>
+          </Route>
+          <Route path="/list-view">
+            <AircraftListView></AircraftListView>
+          </Route>
+          <Route path="/registration">
+            <Registration></Registration>
+          </Route>
+          <Route path="/Login">
+            <Login></Login>
+          </Route>
         </Switch>
       </div>
 
-      <Footer />
     </BrowserRouter>
   );
 }

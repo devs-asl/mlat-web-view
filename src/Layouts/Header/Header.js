@@ -10,15 +10,14 @@ const Header = () => {
       <Navbar expand="lg">
         <Container fluid>
           <NavLink to="/" className="logo">
-                <img src="/Images/logo-v2.png" alt="Logo"/>
-
+            <img src="/Images/logo-v2.png" alt="Logo" />
           </NavLink>
           <Navbar.Toggle
             className="toggle__color"
             aria-controls="basic-navbar-nav"
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav>
+            <Nav className="navbarnav">
               <NavLink className="link1" activeClassName="active_class" to="/">
                 App
               </NavLink>
@@ -40,7 +39,7 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown> */}
               <NavLink
-                className="link2"
+                className="link1"
                 activeClassName="active_class"
                 to="/list-view"
               >
@@ -49,37 +48,21 @@ const Header = () => {
               {/* <NavLink className="link4" to="/">
                 Social
               </NavLink> */}
-              <NavLink className="link5" to="/">
+              <NavLink className="link1" to="/">
                 About
               </NavLink>
             </Nav>
 
             <Nav className="main__newnav">
               <FaUserCircle className="dropdown-basic__icon" />
-              <NavLink className="link1" to="/login">
+              <NavLink className="link2" to="/login">
                 Sign In
               </NavLink>
-              <NavLink className="link1" to="/registration">
+              <NavLink className="link2" to="/registration">
                 Sign Up
               </NavLink>
             </Nav>
           </Navbar.Collapse>
-
-          {/* <Dropdown>
-  <Dropdown.Toggle id="dropdown-basic">
-  <FaUserCircle className="dropdown-basic__icon"/>Sign In
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu className="drop-menu">
-    <Dropdown.Item href="#/action-1" to="/registration">Sign Out</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
-
-<Dropdown>
-  <Dropdown id="dropdown-basic">
-  Sign Up
-  </Dropdown>
-</Dropdown> */}
         </Container>
       </Navbar>
     </div>

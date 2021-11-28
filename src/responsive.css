@@ -1,6 +1,6 @@
 /* For Large Device */
 @media (max-width: 991px) {
-  a.active_class::after {
+  .navbar-nav .link1.active_class::after {
     padding-bottom: 0px;
   }
   a.link2.active_class::after {
@@ -12,6 +12,16 @@
   a.link1:hover::after {
     padding-bottom: 0px;
   }
+  a.link3:hover::after {
+    padding-bottom: 0px;
+  }
+  a.link4:hover::after {
+    padding-bottom: 0px;
+  }
+  a.link5:hover::after {
+    padding-bottom: 0px;
+  }
+
   .drop.nav-item.dropdown:hover::after {
     padding-bottom: 0px;
   }

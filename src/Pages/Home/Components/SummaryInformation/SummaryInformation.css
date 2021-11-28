@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+/* Start Toggle Style */
+
+#Accordions {
+  position: absolute;
+}
+#Accordions .Accordions__left {
+  width: 350px;
+  margin: 17px 0px 0px 17px;
+}
+#Accordions .accordion-item:first-of-type .accordion-button {
+  background: #092359;
+  color: white;
+}
+#Accordions .accordion-item:last-of-type .accordion-button {
+  background: #092359;
+  color: white;
+}
+
+#Accordions .accordion-body {
+  padding: 1rem 1.25rem;
+  background: #4f6695 !important;
+}
+#Accordions .Accordion-Header--live {
+  background: #ffc108;
+  margin-left: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1px 5px 1px 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+#Accordions p.Accordion-Header--question {
+  margin: -1px;
+  margin-left: 10px;
+  border: 2px solid #4f6695;
+  font-size: 12px;
+  color: #4f6695;
+  font-weight: 800;
+  padding: 0px 3px 0px 3px;
+  border-radius: 10px;
+}
+#Accordions .Accordion-body__content--inside {
+  background: #092359;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+}
+#Accordions .Accordion-body__content {
+  margin-left: -11px;
+  margin-right: -11px;
+}
+#Accordions .Accordion-body__content--inside ul li {
+  list-style: none;
+}
+#Accordions .Accordion-body__content--inside__number {
+  color: white;
+  margin-left: -19px;
+}
+#Accordions .Accordion-body__content--inside__number {
+  color: white;
+  margin-left: 17px;
+  font-weight: 600;
+  font-size: 24px;
+  padding-top: 11px;
+}
+#Accordions span.Accordion-body__content--inside__content {
+  margin-left: 43px;
+  color: white;
+  display: block;
+  margin-top: -40px;
+  font-size: 15px;
+}
+#Accordions small.Accordion-body__content--inside__content-small {
+  color: white;
+  display: block;
+  margin-left: 42px;
+  margin-top: -21px;
+  font-size: 12px;
+}
+#Accordions .Accordion-body__content--inside__icon {
+  color: #faa718;
+  margin-left: 264px;
+  font-weight: 600;
+  margin-top: -32px;
+}
+#Accordions svg.Accordion-body__content--inside__icon--users {
+  width: 36%;
+  margin-top: -2px;
+}
+/* End Toggle Style */
+
+@media (max-width: 575px) {
+  #Accordions {
+    width: 87%;
+  }
+  #Accordions .accordion-item:first-of-type .accordion-button {
+    font-size: 11px;
+  }
+  #Accordions .accordion-item:last-of-type .accordion-button {
+    font-size: 11px;
+  }
+  #Accordions svg.Accordion-body__content--inside__icon--users {
+    width: 56%;
+  }
+  #Accordions span.Accordion-body__content--inside__content {
+    font-size: 12px;
+  }
+  #Accordions small.Accordion-body__content--inside__content-small {
+    font-size: 11px;
+  }
+  #Accordions .Accordion-body__content--inside__icon {
+    margin-left: 203px;
+  }
+
+  .text-center.flight-details {
+    margin: auto;
+    padding-top: 59px;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed {
+    font-size: 11px;
+  }
+  .flight-details__Accordion .accordion-item:last-of-type .accordion-button {
+    background: #4f6695;
+    color: white;
+    font-size: 11px;
+  }
+  .flight-details__modal {
+    height: 82vh;
+    width: 95%;
+  }
+  #Accordions .Accordions__left {
+    width: 100%;
+  }
+}

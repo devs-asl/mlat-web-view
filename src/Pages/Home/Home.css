@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+.text-center.flight-details {
+  padding-top: 65px;
+}
+@media (max-width: 991px) {
+  .text-center.flight-details {
+    margin: auto;
+    margin-left: 413px;
+    padding-top: 59px;
+  }
+}

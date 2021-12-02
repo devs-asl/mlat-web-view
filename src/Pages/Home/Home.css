@@ -1,0 +1,10 @@
+.text-center.flight-details {
+  padding-top: 65px;
+}
+@media (max-width: 991px) {
+  .text-center.flight-details {
+    margin: auto;
+    margin-left: 413px;
+    padding-top: 59px;
+  }
+}

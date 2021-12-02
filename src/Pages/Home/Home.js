@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { useAircrafts } from "../../Hooks/useAircrafts";
 import Footer from "../../Layouts/Footer/Footer";
 import Header from "../../Layouts/Header/Header";
+import "./Home.css";
 import AircraftDetails from "./Components/AircraftDetails/AircraftDetails";
 import SummaryInformation from "./Components/SummaryInformation/SummaryInformation";
 
 
 const Apps = () => {
     const [show, setShow] = useState(false);
-    const {aircrafts} = useAircrafts();
+    // const {aircrafts} = useAircrafts();
 
-    console.log(aircrafts);
+    // console.log(aircrafts);
 
     return (
         <>

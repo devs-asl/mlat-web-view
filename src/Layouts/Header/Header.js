@@ -6,7 +6,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <div className="main">
+    <div className="main ">
       <Navbar expand="lg">
         <Container fluid>
           <NavLink to="/" className="logo">
@@ -21,9 +21,12 @@ const Header = () => {
               <NavLink className="link1" activeClassName="active_class" to="/">
                 App
               </NavLink>
-              {/* <NavLink className="link3" to="/">
+              {/* <NavLink className="link1" to="/">
                 Data
               </NavLink> */}
+
+              
+              
               {/* <NavDropdown
                 className="drop"
                 activeClassName="active_class"
@@ -52,8 +55,8 @@ const Header = () => {
                 About
               </NavLink>
             </Nav>
-
-            <Nav className="main__newnav">
+      <div className="main__newnav--extra">
+      <Nav className="main__newnav">
               <FaUserCircle className="dropdown-basic__icon" />
               <NavLink className="link2" to="/login">
                 Sign In
@@ -62,6 +65,8 @@ const Header = () => {
                 Sign Up
               </NavLink>
             </Nav>
+      </div>
+           
           </Navbar.Collapse>
         </Container>
       </Navbar>

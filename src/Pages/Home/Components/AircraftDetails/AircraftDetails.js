@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import "./AircraftDetails.css";
 const AircraftDetails = ({ show, onClose }) => {
   if (!show) {
     return null;

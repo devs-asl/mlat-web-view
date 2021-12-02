@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from "react-bootstrap/Accordion";
+import "./SummaryInformation.css";
 import { FaUsers } from "react-icons/fa";
 
 const SummaryInformation = () => {

@@ -1,13 +1,14 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useAircrafts } from "../../Hooks/useAircrafts";
 import Footer from "../../Layouts/Footer/Footer";
 import Header from "../../Layouts/Header/Header";
+import "./Home.css";
 import AircraftDetails from "./Components/AircraftDetails/AircraftDetails";
 // import SummaryInformation from "./Components/SummaryInformation/SummaryInformation";
 // import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
-import { GoogleMap, LoadScript, Marker, useLoadScript } from '@react-google-maps/api';
+import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import './Home.css';
-import heavy from '../../Assets/heavy16.svg';
+// import heavy from '../../Assets/heavy16.svg';
 
 const mapStyles = {
     width: '100%',
@@ -291,19 +292,19 @@ const darkMode =  [
     }
   ];
 
-  const SensorMarker = () => <div style={{cursor: 'pointer'}}>
-    <svg version="1.1" viewBox="0 0 443.231 443.231" style={{height:'30px'}}>
-	<path d="M381.051,231.153H62.18c0,60.741,63.418,110.635,144.436,116.169v35.91h-41.361l-20,60h152.721l-20-60h-41.361v-35.91
-		C317.634,341.788,381.051,291.894,381.051,231.153z"/>
-    <path d="M327.183,113.632c-58.21-58.21-152.925-58.21-211.135,0l21.213,21.213c46.514-46.513,122.195-46.513,168.709,0
-		L327.183,113.632z"/>
-	<path d="M221.616,30c50.625,0,98.161,19.656,133.852,55.347l21.213-21.213C335.323,22.776,280.253,0,221.616,0
-		S107.908,22.776,66.551,64.134l21.213,21.213C123.455,49.656,170.991,30,221.616,30z"/>
-	<path d="M165.546,163.129l21.213,21.213c9.292-9.291,21.67-14.408,34.857-14.408s25.565,5.117,34.857,14.408l21.213-21.213
-		c-14.958-14.958-34.87-23.195-56.07-23.195S180.503,148.171,165.546,163.129z"/>
+//   const SensorMarker = () => <div style={{cursor: 'pointer'}}>
+//     <svg version="1.1" viewBox="0 0 443.231 443.231" style={{height:'30px'}}>
+// 	<path d="M381.051,231.153H62.18c0,60.741,63.418,110.635,144.436,116.169v35.91h-41.361l-20,60h152.721l-20-60h-41.361v-35.91
+// 		C317.634,341.788,381.051,291.894,381.051,231.153z"/>
+//     <path d="M327.183,113.632c-58.21-58.21-152.925-58.21-211.135,0l21.213,21.213c46.514-46.513,122.195-46.513,168.709,0
+// 		L327.183,113.632z"/>
+// 	<path d="M221.616,30c50.625,0,98.161,19.656,133.852,55.347l21.213-21.213C335.323,22.776,280.253,0,221.616,0
+// 		S107.908,22.776,66.551,64.134l21.213,21.213C123.455,49.656,170.991,30,221.616,30z"/>
+// 	<path d="M165.546,163.129l21.213,21.213c9.292-9.291,21.67-14.408,34.857-14.408s25.565,5.117,34.857,14.408l21.213-21.213
+// 		c-14.958-14.958-34.87-23.195-56.07-23.195S180.503,148.171,165.546,163.129z"/>
         
-</svg>
-</div>
+// </svg>
+// </div>
 
 const Home = () => {
     const [show, setShow] = useState(false);
@@ -314,12 +315,21 @@ const Home = () => {
         lng: 90.393791
     });
 
-    console.log(aircrafts);
+    const [aircraft, setAircraft] = useState({});
+    const [icao, setIcao] = useState();
 
-    const { isLoaded, loadError } = useLoadScript({
+    // console.log(aircrafts);
+
+    const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyAhhveERkRFz2TIjA8akOSGIAC3bpsm5U8" // ,
         // ...otherOptions
       })
+    
+      useEffect(() => {
+        const item = aircrafts.find(item => item._id === icao);
+        console.log(item);
+        setAircraft(item);
+      }, [icao, aircrafts])
 
       function handleLoad(map) {
         mapRef.current = map;
@@ -329,14 +339,21 @@ const Home = () => {
         if (!mapRef.current) return;
     
         const newPos = mapRef.current.getCenter().toJSON();
+        console.log(newPos);
         setPosition(newPos);
       }
+    
+      const handleMarkerClick = (icao_code) => {
+        setIcao(icao_code);
+        setShow(true);
+      }
 
-    console.log(aircrafts)
+    // console.log(aircrafts)
 
     const markers = useMemo(() => {
         return (
         aircrafts.map(item => <Marker 
+            key={item._id}
             icon={{
                 path: "M67.6,234.9h158l0.2,154.5l-61.5,45.3v21.2c0,2.3,0.3,6.4,2.2,7.9c1,0.8,4.1,2.3,12.8,0.6l76.3-21.9l77.3,22c8.1,1.6,11.2,0,12.2-0.7c1.9-1.5,2.2-5.6,2.2-7.9v-21.2l-60.7-44.6l0.9-155.2h156.9c24.9,0,45-20.2,45-45v0c0-24.9-20.2-45-45-45H288.3l0.1-23.2h0.2c-2-42.9-8.9-74.7-31.5-74.7c-22.5,0-29.7,31-31.9,73.8v0.9l0,23.2H67.6c-24.9,0-45,20.2-45,45v0C22.5,214.7,42.7,234.9,67.6,234.9z",
                 // anchor: new google.maps.Point(17, 46),
@@ -350,8 +367,8 @@ const Home = () => {
                 anchor: { x: 250 , y: 200 },
                 rotation: item.angle                         
             }}
-            position={{lat: item.lat,  lng: item.lon}}
-            onClick={() => setShow(true)}
+            position={{lat: parseFloat(item.lat), lng: parseFloat(item.lon)}}
+            onClick={() => handleMarkerClick(item._id) }
             
         />)
         )
@@ -383,7 +400,7 @@ const Home = () => {
         </GoogleMap>     
                     
                 )
-    }, [ isLoaded, aircrafts, position])
+    }, [position, markers])
 
     return (
         <>
@@ -407,7 +424,7 @@ const Home = () => {
 
            
 
-            <AircraftDetails show={show} onClose={() => setShow(false)} />
+            <AircraftDetails show={show} aircraft={aircraft}  onClose={() => setShow(false)} />
 
             {/* <SummaryInformation></SummaryInformation> */}
             <Footer></Footer>

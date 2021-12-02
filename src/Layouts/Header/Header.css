@@ -1,0 +1,144 @@
+/* Start Header Style */
+.main {
+  font-family: "Lato", sans-serif !important;
+  background-color: #000143;
+  color: #79799c;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+}
+.logo {
+  margin-top: -16px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0);
+}
+.navbar-nav {
+  margin: auto;
+}
+.me-auto.navbar-nav .nav-link {
+  color: #79799c;
+}
+a#basic-nav-dropdown {
+  color: #79799c;
+  padding-right: 28px;
+}
+a.link1 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+  margin-right: 11px;
+  padding: 0 10px;
+  position: relative;
+}
+a.link2 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+  padding-right: 31px;
+}
+a.active_class {
+  color: #79799c;
+  color: white;
+}
+
+a.link1:hover {
+  color: white;
+}
+a.link2:hover {
+  color: white;
+}
+a.link2 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+  margin-right: 11px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.navbar-nav .link1.active_class::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  top: 29px;
+  background: #faa718;
+  height: 3px;
+  border-radius: 10px;
+}
+.navbar-nav .link1:hover::after {
+  content: "";
+  width: 100%;
+  background: #faa718;
+  z-index: 999999;
+  border-radius: 2px 2px 0px 0px;
+  bottom: 0px;
+  left: 0;
+  top: 29px;
+  display: block;
+  padding-bottom: 3px;
+  position: absolute;
+}
+
+button#dropdown-basic {
+  background-color: #000143;
+  border: none;
+  color: #79799c;
+}
+button:focus {
+  outline: 0;
+}
+.drop-menu.show {
+  margin-left: -85px;
+}
+.dropdown-basic__icon {
+  color: #faa719;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+button.toggle__color.navbar-toggler {
+  background-color: #dee2e6;
+}
+.main__newnav.navbar-nav {
+  margin-top: -4px;
+}
+a.main__newnav.navbar-nav.link2 {
+  color: #79799c;
+  text-decoration: none;
+  margin-top: 7px;
+  padding-right: 31px;
+}
+
+/* End Header Style */
+
+@media (max-width: 991px) {
+  .navbar-nav .link1.active_class::after {
+    position: relative;
+  }
+  .navbar-nav .link1:hover::after {
+    display: none;
+  }
+  .drop.nav-item.dropdown:hover::after {
+    padding-bottom: 0px;
+  }
+  .dropdown-menu.show a {
+    color: white;
+  }
+  .dropdown-menu.show {
+    width: 0%;
+    background: #000143;
+  }
+}
+
+@media (max-width: 575px) {
+  .main {
+    width: 100%;
+  }
+
+  a.logo.navbar-brand img {
+    width: 79%;
+  }
+}

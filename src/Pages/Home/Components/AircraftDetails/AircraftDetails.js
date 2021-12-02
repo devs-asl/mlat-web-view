@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
-const AircraftDetails = ({ show, onClose }) => {
+import "./AircraftDetails.css";
+const AircraftDetails = ({ show, onClose, aircraft}) => {
+
+  // const [aircraftInfo, setAircraftInfo] = useState({});
+
+  // useEffect(() => {
+    
+  //     if(icao) {
+
+  //     fetch(`http://127.0.0.1:9001/icao/${icao}`)
+  //           .then(response => response.json())
+  //           .then(data => setAircraftInfo(data[0]));
+        
+  //     }
+      
+  // }, [icao]);
+  // console.log(aircraft);
+
+  // console.log(aircraftInfo);
+  // console.log(icao);
+
   if (!show) {
     return null;
   }
@@ -15,7 +35,7 @@ const AircraftDetails = ({ show, onClose }) => {
             <img src="/Images/qatar-airways-bg.jpg" alt="Aircraft"/>
             <div className="flight-details__modal--image__after-bg-image">
               <div className="row">
-                <div class="col d-flex justify-content-center">
+                <div className="col d-flex justify-content-center">
                   <div className="col flight-details__modal--image__after-bg-image__column">
                     <div className="flight-details__modal--image__after-bg-image-logo">
                       <img src="/Images/qatar-airways-logo.png" alt="Aircraft" />
@@ -108,7 +128,7 @@ const AircraftDetails = ({ show, onClose }) => {
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
                     <img src="/Images/more-flight-info-icon.svg" alt="Aircraft" />
-                    More QR634 information
+                    Positional Information
                   </Accordion.Header>
                   <Accordion.Body className="body">
                     <div className="flight-details__Accordion__more-info">
@@ -119,19 +139,26 @@ const AircraftDetails = ({ show, onClose }) => {
                         <table>
                           <tr className="flight-details__Accordion__more-info__type--table">
                             <td>
-                              AIRCRFT TYPE (A333)
+                              LATITUDE
                               <br />
                               <small className="flight-details__Accordion__more-info__type--small1">
-                                Airbus A330-302
+                                {aircraft?.lat ? aircraft?.lat : ''}
+                              </small>
+                            </td>
+                            <td>
+                              LONGITUDE
+                              <br />
+                              <small className="flight-details__Accordion__more-info__type--small2">
+                              {aircraft?.lon ? aircraft?.lon : ''}
                               </small>
                             </td>
                           </tr>
                           <tr>
                             <td>
-                              REGISTRATION
+                              ICAO
                               <br />
                               <small className="flight-details__Accordion__more-info__type--small2">
-                                A7-AED
+                              {aircraft?._id ? aircraft?._id : ''}
                               </small>
                             </td>
                             <td>

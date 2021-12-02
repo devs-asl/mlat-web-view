@@ -6,7 +6,7 @@ export const useAircrafts = () => {
 
     useEffect(() => {
         setInterval(function(){
-            fetch('http://127.0.0.1:9001')
+            fetch('http://192.168.30.5:9001')
                 .then(response => response.json())
                 .then(data => setAircrafts(data));
             

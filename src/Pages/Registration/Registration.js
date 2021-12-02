@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Footer from "../../Layouts/Footer/Footer";
 import Header from "../../Layouts/Header/Header";
+import "./Registration.css";
 
 const Registration = () => {
   return (
